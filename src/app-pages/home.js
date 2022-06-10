@@ -2,10 +2,12 @@ import React from 'react';
 import { Component } from 'react';
 // import { Link } from "react-router-dom";
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import * as turf from '@turf/turf';
 import Dropzone from '../app-components/dropzone'
 import MapboxDraw from "@mapbox/mapbox-gl-draw";
 import FreehandMode from 'mapbox-gl-draw-freehand-mode'
+import { Exception } from 'sass';
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_KEY;
 
@@ -17,7 +19,8 @@ class Map extends Component {
       lat: 40.45646421496375, 
       zoom: 3.5,
       mapOpacity: .5,
-      imageOpacity: .5
+      imageOpacity: .5,
+      imageWidth: 800
     };
     this.mapContainer = React.createRef();
     this.handleChange = this.handleChange.bind(this);
@@ -270,7 +273,15 @@ class Map extends Component {
       }
       ]
     });
-    this.map.addControl(this.Draw, 'top-left');
+    
+    this.map.addControl(
+      new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        mapboxgl: mapboxgl,
+        marker: false
+      })
+    );
+    this.map.addControl(this.Draw);
   }
 
   handleChange(event) {
@@ -283,8 +294,20 @@ class Map extends Component {
       mapOpacity.style.opacity = event.target.value;
     }
     if(event.target.name === 'imageOpacity'){
-      let imageOpacity = document.querySelector(".droppedImage");
-      imageOpacity.style.opacity = event.target.value;
+      try {
+        let image = document.querySelector(".droppedImage");
+        image.style.opacity = event.target.value;
+      } catch (error) {
+        console.error('no image yet');
+      }
+    }
+    if(event.target.name === 'imageWidth'){
+      try {
+        let image = document.querySelector(".droppedImage");
+        image.style.width = `${event.target.value}px`;
+      } catch (error) {
+        console.error('no image yet');
+      }
     }
   }
 
@@ -320,6 +343,16 @@ class Map extends Component {
       this.map.setStyle('mapbox://styles/caseymmiler/cl45xkrmg000714loppfn16v6');
     }
 
+    const finZoomIn = () => {
+      const zoom = this.map.getZoom();
+      this.map.setZoom(zoom+.01);
+    }
+
+    const finZoomOut = () => {
+      const zoom = this.map.getZoom();
+      this.map.setZoom(zoom-.01);
+    }
+
     const downloadGeoJSON = () => {
       // console.log(this.Draw.getAll());
       const data = this.Draw.getAll();
@@ -341,27 +374,49 @@ class Map extends Component {
         <Dropzone />
         <div ref={this.mapContainer} className="map-container" />
         <div className="buttons">
-          <button onClick={() => lockMap()}>lock zoom</button>
-          <button onClick={() => unlockMap()}>unlock zoom</button>
+          <p>Drawing Tools</p>
+          <p className="header special">Zoom Tools</p>
+          <p className="small">Scroll to zoom</p>
+          <div className="button-container">
+            <button className="lock" onClick={() => lockMap()}></button>
+            <button className="unlock" onClick={() => unlockMap()}></button>
+          </div>
+          <p className="small">Finite zoom</p>
+          <div className="button-container">
+            <button onClick={() => finZoomOut()}><span>➖</span></button>
+            <button onClick={() => finZoomIn()}><span>➕</span></button>
+          </div>
+          <p className="header">Style controls</p>
           <button onClick={() => setBlankStyle()}>set blank style</button>
           <button onClick={() => resetStyle()}>reset style</button>
-          <button onClick={() => downloadGeoJSON()}>download GeoJSON</button>
-          <a id="export">file</a>
+          <p className="header">Opacity controls</p>
           <label>
-            <div style={{'position': 'relative'}}>
+            <div className="slider-label">
               Map Opacity:
               <div className="range-label">{this.state.mapOpacity}</div>
             </div>
             <input type="range" className="range" name="mapOpacity" min="0" max="1" step=".01" value={this.state.mapOpacity} onChange={this.handleChange}></input>
           </label>
           <label>
-            <div style={{'position': 'relative'}}>
+            <div className="slider-label">
               Image Opacity:
               <div className="range-label">{this.state.imageOpacity}</div>
             </div>
             <input type="range" className="range" name="imageOpacity" min="0" max="1" step=".01" value={this.state.imageOpacity} onChange={this.handleChange}></input>
           </label>
+          <p className="header">Image controls</p>
+          <label>
+            <div className="slider-label">
+              Image width:
+              <div className="range-label">{this.state.imageWidth}</div>
+            </div>
+            <input type="range" className="range" name="imageWidth" min="100" max="2000" step="1" value={this.state.imageWidth} onChange={this.handleChange}></input>
+          </label>
+          <p className="header"></p>
+          <button className="geojson" onClick={() => downloadGeoJSON()}>Download GeoJSON</button>
+          <a id="export">file</a>
         </div>
+        <span className="attribute">by <a href="https://twitter.com/caseymmiller">@caseymmiller</a></span>
       </div>
     );
   }

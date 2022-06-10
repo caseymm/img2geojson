@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+@import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 @import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css';
+@import 'sidebar';
 
 body {
   margin: 0;
@@ -28,9 +30,6 @@ body {
   height: 300px;
 }
 
-#hidden{
-  display: none;
-}
 
 .allInputContainer{
   height: 100vh;
@@ -63,29 +62,15 @@ body {
   }
 }
 
-.buttons{
+.attribute{
   position: absolute;
-  top: 15px;
-  right: 15px;
   z-index: 1;
-  button{
-    display: block;
-    font-family: 'Ubuntu Mono', monospace;
-    font-size: 18px;
-    padding: 7px;
-    width: 170px;
-    margin-bottom: 5px;
-    background: #fff;
-    border: 1px solid rgb(173, 173, 173);
-    border-radius: 2px;
-  }
+  bottom: 25px;
+  right: 10px;
+  font-size: 14px;
+  color: #4264fb;
+  font-weight: 700;
   a{
-    display: none;
+    color: #4264fb;
   }
-}
-
-.mapbox-gl-draw_polygon{
-  position: relative;
-  z-index: 10;
-  background-color: blue;
 }

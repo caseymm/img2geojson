@@ -1,0 +1,122 @@
+// mapbox overrides
+@media screen and (min-width: 640px){
+  .mapboxgl-ctrl-geocoder {
+    min-width: 170px;
+    box-shadow: none;
+    border: 1px solid rgb(173, 173, 173);
+  }
+  .mapboxgl-ctrl-geocoder--input{
+    padding-right: 5px;
+  }
+}
+
+.mapboxgl-ctrl-group{
+  width: 168px;
+  &.mapboxgl-ctrl{
+    margin-top: 50px;
+    height: 29px;
+    box-shadow: none;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 2px;
+  }
+  button{
+    display: inline;
+    width: 33%;
+    border-right: 1px solid rgb(173, 173, 173);
+    &:nth-of-type(3){
+      border-right-width: 0px;
+    }
+  }
+}
+// end mapbox overrides
+.buttons{
+  position: absolute;
+  padding: 55px 10px 8px 10px;
+  top: 0px;
+  right: 0px;
+  z-index: 1;
+  background: rgba(255, 255, 255, .7);
+  .header{
+    margin-top: 25px;
+    &.special{
+      margin-top: 55px;
+    }
+  }
+  button{
+    display: block;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 18px;
+    padding: 7px;
+    width: 170px;
+    margin-bottom: 5px;
+    background: #fff;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 2px;
+    cursor: pointer;
+    &.geojson{
+      background-color: #4264fb;
+      color: #fff;
+      &:hover{
+        background-color: darken(#4264fb,  10%);
+      }
+    }
+    &:hover{
+      background: darken(#fff, 10%);
+    }
+    &.lock{
+      background-image: url('assets/lock.svg');
+      background-position:center;
+      background-size: 20px 20px;
+      background-repeat: no-repeat;
+    }
+    &.unlock{
+      background-image: url('assets/unlock.svg');
+      background-position:center;
+      background-size: 30px 20px;
+      background-repeat: no-repeat;
+    }
+  }
+  .button-container{
+    width: calc(100% - 2px);
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 2px;
+    height: 29px;
+    button{
+      border-width: 0px;
+      border-radius: 0px;
+      width: 50%;
+      margin-bottom: 0px;
+      &:first-of-type{
+        border-right: 1px solid rgb(173, 173, 173);
+      }
+      span{
+        top: -3px;
+        position: relative;
+      }
+    }
+  }
+  a#export{
+    display: none;
+  }
+  p{
+    margin: 10px 0 5px;
+    &.small{
+      font-size: 15px;
+    }
+  }
+  label{
+    font-size: 15px;
+  }
+  .slider-label{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  input[type="range"]{
+    width: 100%;
+  }
+}
+
