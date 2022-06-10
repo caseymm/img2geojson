@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/img-to-geojson/static/css/main.b6909f84.chunk.css",
-    "main.js": "/img-to-geojson/static/js/main.8da03c53.chunk.js",
-    "main.js.map": "/img-to-geojson/static/js/main.8da03c53.chunk.js.map",
-    "runtime-main.js": "/img-to-geojson/static/js/runtime-main.16f1486a.js",
-    "runtime-main.js.map": "/img-to-geojson/static/js/runtime-main.16f1486a.js.map",
-    "static/css/2.0ed29f11.chunk.css": "/img-to-geojson/static/css/2.0ed29f11.chunk.css",
-    "static/js/2.e7a41259.chunk.js": "/img-to-geojson/static/js/2.e7a41259.chunk.js",
-    "static/js/2.e7a41259.chunk.js.map": "/img-to-geojson/static/js/2.e7a41259.chunk.js.map",
-    "index.html": "/img-to-geojson/index.html",
-    "static/css/2.0ed29f11.chunk.css.map": "/img-to-geojson/static/css/2.0ed29f11.chunk.css.map",
-    "static/css/main.b6909f84.chunk.css.map": "/img-to-geojson/static/css/main.b6909f84.chunk.css.map",
-    "static/js/2.e7a41259.chunk.js.LICENSE.txt": "/img-to-geojson/static/js/2.e7a41259.chunk.js.LICENSE.txt",
-    "static/media/index.scss": "/img-to-geojson/static/media/unlock.b46691e5.svg"
+    "main.css": "/img2geojson/static/css/main.13ff823a.chunk.css",
+    "main.js": "/img2geojson/static/js/main.8da03c53.chunk.js",
+    "main.js.map": "/img2geojson/static/js/main.8da03c53.chunk.js.map",
+    "runtime-main.js": "/img2geojson/static/js/runtime-main.224440c5.js",
+    "runtime-main.js.map": "/img2geojson/static/js/runtime-main.224440c5.js.map",
+    "static/css/2.0ed29f11.chunk.css": "/img2geojson/static/css/2.0ed29f11.chunk.css",
+    "static/js/2.cd6310ba.chunk.js": "/img2geojson/static/js/2.cd6310ba.chunk.js",
+    "static/js/2.cd6310ba.chunk.js.map": "/img2geojson/static/js/2.cd6310ba.chunk.js.map",
+    "index.html": "/img2geojson/index.html",
+    "static/css/2.0ed29f11.chunk.css.map": "/img2geojson/static/css/2.0ed29f11.chunk.css.map",
+    "static/css/main.13ff823a.chunk.css.map": "/img2geojson/static/css/main.13ff823a.chunk.css.map",
+    "static/js/2.cd6310ba.chunk.js.LICENSE.txt": "/img2geojson/static/js/2.cd6310ba.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/img2geojson/static/media/unlock.b46691e5.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.16f1486a.js",
+    "static/js/runtime-main.224440c5.js",
     "static/css/2.0ed29f11.chunk.css",
-    "static/js/2.e7a41259.chunk.js",
-    "static/css/main.b6909f84.chunk.css",
+    "static/js/2.cd6310ba.chunk.js",
+    "static/css/main.13ff823a.chunk.css",
     "static/js/main.8da03c53.chunk.js"
   ]
 }
