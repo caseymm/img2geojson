@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/fire-nearby/static/css/main.095923e2.chunk.css",
-    "main.js": "/fire-nearby/static/js/main.1104b9d3.chunk.js",
-    "main.js.map": "/fire-nearby/static/js/main.1104b9d3.chunk.js.map",
-    "runtime-main.js": "/fire-nearby/static/js/runtime-main.0b957abd.js",
-    "runtime-main.js.map": "/fire-nearby/static/js/runtime-main.0b957abd.js.map",
-    "static/css/2.d537ca62.chunk.css": "/fire-nearby/static/css/2.d537ca62.chunk.css",
-    "static/js/2.b6f3a15b.chunk.js": "/fire-nearby/static/js/2.b6f3a15b.chunk.js",
-    "static/js/2.b6f3a15b.chunk.js.map": "/fire-nearby/static/js/2.b6f3a15b.chunk.js.map",
-    "index.html": "/fire-nearby/index.html",
-    "static/css/2.d537ca62.chunk.css.map": "/fire-nearby/static/css/2.d537ca62.chunk.css.map",
-    "static/css/main.095923e2.chunk.css.map": "/fire-nearby/static/css/main.095923e2.chunk.css.map",
-    "static/js/2.b6f3a15b.chunk.js.LICENSE.txt": "/fire-nearby/static/js/2.b6f3a15b.chunk.js.LICENSE.txt"
+    "main.css": "/img-to-geojson/static/css/main.b6909f84.chunk.css",
+    "main.js": "/img-to-geojson/static/js/main.8da03c53.chunk.js",
+    "main.js.map": "/img-to-geojson/static/js/main.8da03c53.chunk.js.map",
+    "runtime-main.js": "/img-to-geojson/static/js/runtime-main.16f1486a.js",
+    "runtime-main.js.map": "/img-to-geojson/static/js/runtime-main.16f1486a.js.map",
+    "static/css/2.0ed29f11.chunk.css": "/img-to-geojson/static/css/2.0ed29f11.chunk.css",
+    "static/js/2.e7a41259.chunk.js": "/img-to-geojson/static/js/2.e7a41259.chunk.js",
+    "static/js/2.e7a41259.chunk.js.map": "/img-to-geojson/static/js/2.e7a41259.chunk.js.map",
+    "index.html": "/img-to-geojson/index.html",
+    "static/css/2.0ed29f11.chunk.css.map": "/img-to-geojson/static/css/2.0ed29f11.chunk.css.map",
+    "static/css/main.b6909f84.chunk.css.map": "/img-to-geojson/static/css/main.b6909f84.chunk.css.map",
+    "static/js/2.e7a41259.chunk.js.LICENSE.txt": "/img-to-geojson/static/js/2.e7a41259.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/img-to-geojson/static/media/unlock.b46691e5.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.0b957abd.js",
-    "static/css/2.d537ca62.chunk.css",
-    "static/js/2.b6f3a15b.chunk.js",
-    "static/css/main.095923e2.chunk.css",
-    "static/js/main.1104b9d3.chunk.js"
+    "static/js/runtime-main.16f1486a.js",
+    "static/css/2.0ed29f11.chunk.css",
+    "static/js/2.e7a41259.chunk.js",
+    "static/css/main.b6909f84.chunk.css",
+    "static/js/main.8da03c53.chunk.js"
   ]
 }
